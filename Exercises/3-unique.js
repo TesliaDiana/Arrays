@@ -1,8 +1,8 @@
 'use strict';
 
-// Create and return a new array without duplicate elements
-// Don't modify initial array
-
-const unique = (array) => [];
+const unique = (array) => array.reduce((accum, value) => {
+  if (!accum.includes(value)) accum.push(value);
+  return accum;
+}, []);
 
 module.exports = { unique };
